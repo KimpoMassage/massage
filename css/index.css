@@ -180,15 +180,12 @@ section.content{
 .move_map{
     width: 100%;
     max-width: 762px;
-    height: 100px;
+    height: 130px;
     border: 1px solid #ededed;
     padding: 10px;
     margin-top: 10px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
     position: fixed;
     bottom: 0;
     left: 50%;
@@ -199,7 +196,16 @@ section.content{
     z-index: 10;
 }
 
-.move_map a{
+.move_map > div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.move_map > div > a{
     width: 48%;
     background-color: #ff1800;
     color: #fff;
@@ -214,3 +220,14 @@ section.content{
     font-weight: bold;
 }
 
+.tel{
+    width: 100%;
+    background-color: gray;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+}
