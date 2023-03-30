@@ -303,10 +303,9 @@
 
 		//할인가, 일반가 분기 적용
 		$(function(){
-			const urlParams = new URL(location.href).searchParams;
-			const urlType = urlParams.get('type');
-
-			if(urlType == 'check'){
+			const url = location.href;
+			const param = url.substring(url.indexOf('?') + 1)
+			if(param == 'type=check'){
 				$('#discount-person').css('display', 'flex');
 			}else{
 				$('#origin-person').css('display', 'flex');
