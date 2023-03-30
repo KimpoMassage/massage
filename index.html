@@ -88,18 +88,12 @@
 		</ul>
 
 		<!-- 가격 -->
-		<div class="price">
+		<div class="price" id="discount-person" style="display: none;">
 			<div class="con">
 				<p class="title">이벤트 및 공지</p>
 				<ul>
 					<li>
 						<p class="hour">*사전예약 후 현금 이용시 적용되는 회원가 입니다.</p>
-					</li>
-					<li>
-						<p class="hour">*과도한 음주시 예약불가입니다.</p>
-					</li>
-					<li>
-						<p class="hour">*퇴폐문의 사절합니다.</p>
 					</li>
 				</ul>
 			</div>
@@ -188,6 +182,92 @@
 			</div>
 		</div>
 
+		<div class="price origin" id="origin-person" style="display: none;">
+			<div class="con">
+				<p class="title">타이 관리</p>
+				<ul>
+					<li>
+						<p class="hour">60분</p>
+						<div>
+							<p class="basic-price">정상가(카드) 50,000원</p>
+							<div class="discount-price">
+								<span>회원가(현금)</span>
+								<p>40,000원</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="hour">80분</p>
+						<div>
+							<p class="basic-price">정상가(카드) 60,000원</p>
+							<div class="discount-price">
+								<span>회원가(현금)</span>
+								<p>50,000원</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="hour">100분</p>
+						<div>
+							<p class="basic-price">정상가(카드) 80,000원</p>
+							<div class="discount-price">
+								<span>회원가(현금)</span>
+								<p>70,000원</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="con">
+				<p class="title">아로마 관리</p>
+				<ul>
+					<li>
+						<p class="hour">60분</p>
+						<div>
+							<p class="basic-price">정상가(카드) 60,000원</p>
+							<div class="discount-price">
+								<span>회원가(현금)</span>
+								<p>50,000원</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="hour">80분</p>
+						<div>
+							<p class="basic-price">정상가(카드) 70,000원</p>
+							<div class="discount-price">
+								<span>회원가(현금)</span>
+								<p>60,000원</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<p class="hour">100분</p>
+						<div>
+							<p class="basic-price">정상가(카드) 90,000원</p>
+							<div class="discount-price">
+								<span>회원가(현금)</span>
+								<p>80,000원</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="con">
+				<p class="title">추가 메뉴</p>
+				<ul>
+					<li>
+						<p class="hour">관리사 지명</p>
+						<div>
+							<div class="discount-price">
+								<p>10,000원</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
 		<!-- 지도 -->
 		<div id="map" class="map"></div>
 		<div class="move_map">
@@ -219,6 +299,17 @@
 
 		// 마커가 지도 위에 표시되도록 설정합니다
 		marker.setMap(map);
+
+
+		//할인가, 일반가 분기 적용
+		const urlParams = new URL(location.href).searchParams;
+		const urlType = urlParams.get('type');
+
+		if(urlType == 'check'){
+			$('#discount-person').css('display', 'flex');
+		}else{
+			$('#origin-person').css('display', 'flex');
+		}
 	</script>
 </body>
 </html>
