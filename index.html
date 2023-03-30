@@ -302,14 +302,16 @@
 
 
 		//할인가, 일반가 분기 적용
-		const urlParams = new URL(location.href).searchParams;
-		const urlType = urlParams.get('type');
+		$(function(){
+			const urlParams = new URL(location.href).searchParams;
+			const urlType = urlParams.get('type');
 
-		if(urlType == 'check'){
-			$('#discount-person').css('display', 'flex');
-		}else{
-			$('#origin-person').css('display', 'flex');
-		}
+			if(urlType == 'check'){
+				$('#discount-person').css('display', 'flex');
+			}else{
+				$('#origin-person').css('display', 'flex');
+			}
+		})
 	</script>
 </body>
 </html>
