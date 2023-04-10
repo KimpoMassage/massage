@@ -159,6 +159,7 @@ section.content {
   flex-direction: row;
   align-items: center;
   font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .price .con ul li div .discount-price span {
@@ -234,8 +235,4 @@ section.content {
   border-radius: 10px;
   text-align: center;
   text-decoration: none;
-}
-
-.price .con ul li div .discount-price:first-child{
-  margin-bottom: 10px;
 }
