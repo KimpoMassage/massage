@@ -235,3 +235,7 @@ section.content {
   text-align: center;
   text-decoration: none;
 }
+
+.price .con ul li div .discount-price:first-child{
+  margin-bottom: 10px;
+}
