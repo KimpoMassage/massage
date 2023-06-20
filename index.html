@@ -353,7 +353,7 @@
 		//할인가, 일반가 분기 적용
 		$(function(){
 			const url = location.href;
-			const param = url.substring(url.indexOf('/') + 1);
+			const param = url.substring(url.indexOf('?') + 1);
 			console.log(param);
 			if(param == 'event'){
 				$('#discount-person').css('display', 'flex');
