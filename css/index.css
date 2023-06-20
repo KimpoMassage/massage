@@ -241,6 +241,10 @@ section.content {
   text-decoration: none;
 }
 
+.hire{
+  display: none;
+}
+
 .hire li{
   align-items: flex-start;
 }
