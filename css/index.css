@@ -72,6 +72,10 @@ section.content {
   font-weight: bold;
 }
 
+.slide img{
+  max-height: 373px;
+}
+
 .basic-info {
   display: flex;
   flex-direction: column;
@@ -235,4 +239,13 @@ section.content {
   border-radius: 10px;
   text-align: center;
   text-decoration: none;
+}
+
+.hire li{
+  align-items: flex-start;
+}
+
+.hire img{
+  width: 50%;
+  height: auto;
 }
